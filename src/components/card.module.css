@@ -57,9 +57,31 @@
 
 .cardContent {
     padding: 1.5rem;
+    height: 100%;
 
+    cursor: pointer;
     border-radius: 1rem;
     background: var(--clr-card-bg);
+}
+
+.cardContent:hover,
+.cardContent:focus {
+    background: color-mix(in srgb, var(--clr-card-bg) 80%, var(--clr-card-selection) 20%);
+}
+
+.menuBtn {
+    background: transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
+    outline: none;
+    cursor: pointer;
+}
+
+.menuBtn:hover,
+.menuBtn:focus {
+    filter: drop-shadow(0 0 3px var(--clr-text));
+
 }
 
 .wrapper {

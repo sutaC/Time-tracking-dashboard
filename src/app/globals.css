@@ -50,6 +50,7 @@ small {
 }
 
 body {
+    margin: 0;
     padding: 1rem;
     background: var(--clr-body-bg);
     display: grid;

@@ -58,12 +58,14 @@ export default function Card(params: { category: Category }) {
 			<div className={style.cardContent}>
 				<div className={style.wrapper}>
 					<p className={style.heading}>{params.category.title}</p>
-					<Image
-						src={"/images/icon-ellipsis.svg"}
-						alt='Menu'
-						width={20}
-						height={5}
-					></Image>
+					<button className={style.menuBtn}>
+						<Image
+							src={"/images/icon-ellipsis.svg"}
+							alt='Menu'
+							width={20}
+							height={5}
+						></Image>
+					</button>
 				</div>
 				<div className={style.wrapper}>
 					<p className={style.time}>

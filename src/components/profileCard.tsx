@@ -43,6 +43,7 @@ export default function ProfileCard() {
 					}}
 				/>
 				<label htmlFor='daily'>Daily</label>
+
 				<input
 					type='radio'
 					name='timeMenu'
@@ -53,6 +54,7 @@ export default function ProfileCard() {
 					}}
 				/>
 				<label htmlFor='weekly'>Weekly</label>
+
 				<input
 					type='radio'
 					name='timeMenu'
