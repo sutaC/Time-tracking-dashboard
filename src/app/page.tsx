@@ -9,8 +9,8 @@ export default async function Page() {
 	return (
 		<main>
 			<ProfileCard></ProfileCard>
-			{data.map((category) => {
-				return <Card category={category}></Card>;
+			{data.map((category, idx) => {
+				return <Card key={idx} category={category}></Card>;
 			})}
 		</main>
 	);

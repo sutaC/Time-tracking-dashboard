@@ -1,26 +1,53 @@
 "use client";
 import style from "./card.module.css";
 import Image from "next/image";
+import { SelectTimeEvent } from "./profileCard";
+import { useEffect, useState } from "react";
+
+type Timeframe = {
+	current: number;
+	previous: number;
+};
 
 export type Category = {
 	title: string;
 	timeframes: {
-		daily: {
-			current: number;
-			previous: number;
-		};
-		weekly: {
-			current: number;
-			previous: number;
-		};
-		monthly: {
-			current: number;
-			previous: number;
-		};
+		daily: Timeframe;
+		weekly: Timeframe;
+		monthly: Timeframe;
 	};
 };
 
 export default function Card(params: { category: Category }) {
+	const [timeframe, setTimeframe] = useState(
+		params.category.timeframes.weekly
+	);
+	const [timeScale, setTimeScale] = useState("Week");
+
+	function handleTimeChange(event: SelectTimeEvent) {
+		const value = event.detail.value;
+		switch (value) {
+			case "daily":
+				setTimeframe(params.category.timeframes.daily);
+				setTimeScale("Day");
+				break;
+			case "weekly":
+				setTimeframe(params.category.timeframes.weekly);
+				setTimeScale("Week");
+				break;
+			case "monthly":
+				setTimeframe(params.category.timeframes.monthly);
+				setTimeScale("Month");
+				break;
+		}
+	}
+
+	useEffect(() => {
+		document.addEventListener("selectTime", (e) => {
+			handleTimeChange(e as SelectTimeEvent);
+		});
+	}, []);
+
 	return (
 		<div className={style.cardContainer}>
 			<div className={style.cardContent}>
@@ -35,11 +62,9 @@ export default function Card(params: { category: Category }) {
 					></Image>
 				</div>
 				<div className={style.wrapper}>
-					<p className={style.time}>
-						{params.category.timeframes.weekly.current}hrs
-					</p>
+					<p className={style.time}>{timeframe.current}hrs</p>
 					<small>
-						Last Week - {params.category.timeframes.weekly.previous}
+						Last {timeScale} - {timeframe.previous}
 						hrs
 					</small>
 				</div>
