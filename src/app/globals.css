@@ -52,4 +52,7 @@ small {
 body {
     padding: 1rem;
     background: var(--clr-body-bg);
+    display: grid;
+    align-items: center;
+    min-height: 100vh;
 }

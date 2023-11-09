@@ -49,3 +49,15 @@
     opacity: 1;
     color: var(--clr-text);
 }
+
+@media (min-width: 750px) {
+    .profileCard {
+        grid-row: 1/ 3;
+    }
+
+    .heading,
+    .menu {
+        flex-direction: column;
+        align-items: start;
+    }
+}
