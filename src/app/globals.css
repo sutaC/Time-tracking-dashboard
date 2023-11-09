@@ -16,12 +16,12 @@
     --clr-card-social-bg: hsl(264, 64%, 52%);
     --clr-card-selfCare-bg: hsl(43, 84%, 65%);
 
-    --url-card-work-bg: url("/documents/assets/images/icon-work.svg");
-    --url-card-play-bg: url("/documents/assets/images/icon-play.svg");
-    --url-card-study-bg: url("/documents/assets/images/icon-study.svg");
-    --url-card-exercise-bg: url("/documents/assets/images/icon-exercise.svg");
-    --url-card-social-bg: url("/documents/assets/images/icon-social.svg");
-    --url-card-selfCare-bg: url("/documents/assets/images/icon-self-care.svg");
+    --url-card-work-bg: url("/images/icon-work.svg");
+    --url-card-play-bg: url("/images/icon-play.svg");
+    --url-card-study-bg: url("/images/icon-study.svg");
+    --url-card-exercise-bg: url("/images/icon-exercise.svg");
+    --url-card-social-bg: url("/images/icon-social.svg");
+    --url-card-selfCare-bg: url("/images/icon-self-care.svg");
 
     --fw-bold: 500;
     --fw-normal: 400;
