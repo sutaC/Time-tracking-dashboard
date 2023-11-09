@@ -21,7 +21,7 @@ export default function ProfileCard() {
 		<div className={style.profileCard}>
 			<div className={style.heading}>
 				<Image
-					src={"/images/image-jeremy.png"}
+					src={"/documents/assets/images/image-jeremy.png"}
 					alt='Profile picture'
 					width={75}
 					height={75}

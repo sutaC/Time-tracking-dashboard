@@ -60,7 +60,7 @@ export default function Card(params: { category: Category }) {
 					<p className={style.heading}>{params.category.title}</p>
 					<button className={style.menuBtn}>
 						<Image
-							src={"/images/icon-ellipsis.svg"}
+							src={"/documents/assets/images/icon-ellipsis.svg"}
 							alt='Menu'
 							width={20}
 							height={5}
