@@ -7,7 +7,7 @@ export default async function Page() {
 	const data = json as Category[];
 
 	return (
-		<main>
+		<main className={styles.main}>
 			<ProfileCard></ProfileCard>
 			{data.map((category, idx) => {
 				return <Card key={idx} category={category}></Card>;

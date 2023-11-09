@@ -49,12 +49,16 @@ export default function Card(params: { category: Category }) {
 	}, []);
 
 	return (
-		<div className={style.cardContainer}>
+		<div
+			className={style.cardContainer}
+			data-category={`category-${params.category.title
+				.toLocaleLowerCase()
+				.replace(" ", "-")}`}
+		>
 			<div className={style.cardContent}>
 				<div className={style.wrapper}>
 					<p className={style.heading}>{params.category.title}</p>
 					<Image
-						className={style.menu}
 						src={"/images/icon-ellipsis.svg"}
 						alt='Menu'
 						width={20}
@@ -62,10 +66,13 @@ export default function Card(params: { category: Category }) {
 					></Image>
 				</div>
 				<div className={style.wrapper}>
-					<p className={style.time}>{timeframe.current}hrs</p>
+					<p className={style.time}>
+						{timeframe.current}
+						{timeframe.current.valueOf() !== 1 ? "hrs" : "hr"}
+					</p>
 					<small>
 						Last {timeScale} - {timeframe.previous}
-						hrs
+						{timeframe.previous.valueOf() !== 1 ? "hrs" : "hr"}
 					</small>
 				</div>
 			</div>

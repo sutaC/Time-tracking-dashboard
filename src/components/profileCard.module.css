@@ -1,0 +1,51 @@
+.profileCard {
+    border-radius: 1rem;
+    background: var(--clr-card-bg);
+}
+
+.heading {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 1rem;
+
+    padding: 1.5rem;
+
+    border-radius: 1rem;
+    background: var(--clr-card-profile-bg);
+}
+
+.profilePicture {
+    border: 3px solid var(--clr-text);
+    border-radius: 100%;
+}
+
+.name {
+    margin: 0.2em 0;
+    font-size: 1.5rem;
+    font-weight: var(--fw-light);
+}
+
+.menu {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 1rem;
+    margin: 1.5rem;
+}
+
+.menu>input {
+    display: none;
+}
+
+.menu>label {
+    opacity: 0.5;
+    cursor: pointer;
+    font-weight: var(--fw-light);
+    color: var(--clr-text-selection);
+}
+
+.menu>input:checked+label {
+    opacity: 1;
+    color: var(--clr-text);
+}

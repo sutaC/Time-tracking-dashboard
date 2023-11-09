@@ -1,0 +1,79 @@
+.cardContainer {
+    --_card-bg: red;
+    --_icon: var(--url-card-work-bg);
+}
+
+.cardContainer[data-category="category-work"] {
+    --_card-bg: var(--clr-card-work-bg);
+    --_icon: var(--url-card-work-bg);
+}
+
+.cardContainer[data-category="category-play"] {
+    --_card-bg: var(--clr-card-play-bg);
+    --_icon: var(--url-card-play-bg);
+}
+
+.cardContainer[data-category="category-study"] {
+    --_card-bg: var(--clr-card-study-bg);
+    --_icon: var(--url-card-study-bg);
+}
+
+.cardContainer[data-category="category-exercise"] {
+    --_card-bg: var(--clr-card-exercise-bg);
+    --_icon: var(--url-card-exercise-bg);
+}
+
+.cardContainer[data-category="category-social"] {
+    --_card-bg: var(--clr-card-social-bg);
+    --_icon: var(--url-card-social-bg);
+}
+
+.cardContainer[data-category="category-self-care"] {
+    --_card-bg: var(--clr-card-selfCare-bg);
+    --_icon: var(--url-card-selfCare-bg);
+}
+
+/* --- */
+
+.cardContainer {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+
+    padding-top: 2.5rem;
+    border-radius: 1rem;
+
+    background-color: var(--_card-bg);
+}
+
+.cardContainer::after {
+    position: absolute;
+    top: -0.5rem;
+    right: 1rem;
+    content: var(--_icon);
+
+    z-index: -1;
+}
+
+.cardContent {
+    padding: 1.5rem;
+
+    border-radius: 1rem;
+    background: var(--clr-card-bg);
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.heading {
+    font-weight: var(--fw-bold);
+}
+
+.time {
+    font-size: 2rem;
+    line-height: 3rem;
+    font-weight: var(--fw-light);
+}

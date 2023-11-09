@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
+
+:root {
+    --clr-body-bg: hsl(226, 43%, 10%);
+    --clr-card-bg: hsl(235, 46%, 20%);
+    --clr-card-selection: hsl(235, 45%, 61%);
+
+    --clr-text: hsl(0, 0%, 100%);
+    --clr-text-selection: hsl(236, 100%, 87%);
+
+    --clr-card-profile-bg: hsl(246, 80%, 60%);
+    --clr-card-work-bg: hsl(15, 100%, 70%);
+    --clr-card-play-bg: hsl(195, 74%, 62%);
+    --clr-card-study-bg: hsl(348, 100%, 68%);
+    --clr-card-exercise-bg: hsl(145, 58%, 55%);
+    --clr-card-social-bg: hsl(264, 64%, 52%);
+    --clr-card-selfCare-bg: hsl(43, 84%, 65%);
+
+    --url-card-work-bg: url("/images/icon-work.svg");
+    --url-card-play-bg: url("/images/icon-play.svg");
+    --url-card-study-bg: url("/images/icon-study.svg");
+    --url-card-exercise-bg: url("/images/icon-exercise.svg");
+    --url-card-social-bg: url("/images/icon-social.svg");
+    --url-card-selfCare-bg: url("/images/icon-self-care.svg");
+
+    --fw-bold: 500;
+    --fw-normal: 400;
+    --fw-light: 300;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+input,
+button {
+    font-family: 'Rubik', sans-serif;
+    font-weight: var(--fw-normal);
+    color: var(--clr-text);
+}
+
+p {
+    margin: 0;
+}
+
+small {
+    font-weight: var(--fw-light);
+    opacity: 0.5;
+}
+
+body {
+    padding: 1rem;
+    background: var(--clr-body-bg);
+}

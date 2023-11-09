@@ -25,6 +25,7 @@ export default function ProfileCard() {
 					alt='Profile picture'
 					width={75}
 					height={75}
+					className={style.profilePicture}
 				></Image>
 				<div>
 					<small>Report for</small>
