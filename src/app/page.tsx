@@ -1,18 +1,17 @@
-"use client";
 import ProfileCard from "@/components/profileCard";
-import Card from "@/components/card";
+import Card, { Category } from "@/components/card";
 import styles from "./page.module.css";
+import json from "@/../public/data/data.json";
 
-export default function Home() {
+export default async function Page() {
+	const data = json as Category[];
+
 	return (
 		<main>
 			<ProfileCard></ProfileCard>
-			<Card></Card>
-			<Card></Card>
-			<Card></Card>
-			<Card></Card>
-			<Card></Card>
-			<Card></Card>
+			{data.map((category) => {
+				return <Card category={category}></Card>;
+			})}
 		</main>
 	);
 }
